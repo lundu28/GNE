@@ -25,9 +25,8 @@ FILE_PATH = os.path.dirname(os.path.abspath(__file__))
 def dfs(u, tree, handlers, params, res_radius, res_coordinates):
     if len(tree[u].childst) == 0:
         return
-
+    print("Start dealing the node %d" @ u)
     node_in_tree, sim_mat, var_mat = handlers["get_network"].get_network(u, tree)
-
 
     if (len(node_in_tree) <= 2):
         rc = np.random.random(size = params["embedding_model"]["embedding_size"]) * 2 - 1
@@ -46,7 +45,9 @@ def dfs(u, tree, handlers, params, res_radius, res_coordinates):
             bs = BatchStrategy(sim_mat_norm, {})
         params["embedding_model"]["num_nodes"] = len(sim_mat_norm)
         ne = handlers["embedding_model"](params["embedding_model"])
-        X = ne.train(getattr(bs, params["embedding_model"]["batch_func"]), params["embedding_model"]["iteration"])
+        X = ne.train(
+                getattr(bs, params["embedding_model"]["batch_func"]),
+                params["embedding_model"]["iteration"])
 
         del ne, bs
 
