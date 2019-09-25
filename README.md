@@ -3,6 +3,6 @@
 
 ## How to use
 - We upload a sample dataset Hamilton and you can run our algorithm on this dataset by the following command:
-```python
+```shell
 python main.py --conf hamilton_real2
 ```
