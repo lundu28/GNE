@@ -6,3 +6,8 @@
 ```shell
 python main.py --conf hamilton_real2
 ```
+
+## Introduction of Data Structure
+- "edges_hamilton.txt" saves the structure of network.
+- "flag_hamilton.txt" saves the labels of nodes that are utilized as ground truth in the node classification task.
+- "tree2_hamilton" saves all the edges of the tree, and each pair number is a directed edge including the predecessor node ID in first and the successor node ID in back. And the leaf of the tree represents the original node in the network and their IDs are consistent.
