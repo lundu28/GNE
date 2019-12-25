@@ -25,7 +25,7 @@ FILE_PATH = os.path.dirname(os.path.abspath(__file__))
 def dfs(u, tree, handlers, params, res_radius, res_coordinates):
     if len(tree[u].childst) == 0:
         return
-    print("Start dealing the node %d" @ u)
+    print("Start dealing the node %d" % u)
     node_in_tree, sim_mat, var_mat = handlers["get_network"].get_network(u, tree)
 
     if (len(node_in_tree) <= 2):
