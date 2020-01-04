@@ -6,6 +6,7 @@
 ```shell
 python main.py --conf hamilton_real2
 ```
+- After running the command above, you can find the node embedding and classification results in `./res`.
 
 ## Introduction of Data Structure
 - "edges_hamilton.txt" saves the structure of network.
